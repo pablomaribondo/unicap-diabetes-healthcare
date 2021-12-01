@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "git-commit-msg-linter": "^3.2.8",
     "lerna": "^4.0.0"
   }
 }
