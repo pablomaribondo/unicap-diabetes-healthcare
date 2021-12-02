@@ -1,6 +1,11 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "unicap-diabetes-healthcare",
+  "author": "Pablo Maribondo <pablomgvieira@gmail.com>",
+  "scripts": {
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "format": "lerna run format"
+  },
   "devDependencies": {
     "git-commit-msg-linter": "^3.2.8",
     "lerna": "^4.0.0"

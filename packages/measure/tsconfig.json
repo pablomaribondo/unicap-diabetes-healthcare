@@ -7,9 +7,6 @@
     "skipLibCheck": true,
     "allowJs": true,
     "outDir": "./dist",
-    "baseUrl": ".",
-    "paths": {
-      "@config/*": ["./src/config/*"]
-    }
+    "baseUrl": "."
   }
 }
