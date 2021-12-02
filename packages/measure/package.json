@@ -10,7 +10,8 @@
     "start": "node .",
     "lint": "eslint ./src --ext .ts,.js",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --write \"**/*.+(ts|js|json|md)\""
+    "format": "prettier --write \"**/*.+(ts|js|json|md)\"",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.5.0",
@@ -19,6 +20,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-xo": "^0.39.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "lint-staged": "^12.1.2",
     "prettier": "^2.5.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.2"
