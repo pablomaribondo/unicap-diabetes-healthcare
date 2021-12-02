@@ -5,7 +5,7 @@
   "author": "Pablo Maribondo <pablomgvieira@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev ./src/index.ts",
+    "dev": "ts-node-dev -r dotenv/config ./src/index.ts",
     "build": "tsc",
     "start": "node .",
     "lint": "eslint ./src --ext .ts,.js",
@@ -13,7 +13,11 @@
     "format": "prettier --write \"**/*.+(ts|js|json|md)\"",
     "precommit": "lint-staged"
   },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
   "devDependencies": {
+    "@types/node": "^16.11.11",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "eslint": "^8.3.0",
