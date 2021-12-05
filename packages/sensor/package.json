@@ -1,5 +1,5 @@
 {
-  "name": "measure-service",
+  "name": "sensor-service",
   "version": "1.0.0",
   "main": "dist/index.js",
   "author": "Pablo Maribondo <pablomgvieira@gmail.com>",
