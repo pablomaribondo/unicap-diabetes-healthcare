@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "author": "Pablo Maribondo <pablomgvieira@gmail.com>",
+  "description": "MQTT client for measurements",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev -r dotenv/config ./src/index.ts",
@@ -14,6 +15,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "date-fns": "^2.27.0",
     "dotenv": "^10.0.0",
     "mqtt": "^4.2.8",
     "node-cron": "^3.0.0"
