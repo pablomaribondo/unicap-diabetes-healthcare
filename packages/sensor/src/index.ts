@@ -1,20 +1,33 @@
-import mqtt from 'mqtt';
 import cron from 'node-cron';
 
-const mqttConfig = 'mqtt://test.mosquitto.org';
-const topic = 'hospital-12/room-431/glucose';
-const client = mqtt.connect(mqttConfig);
+import { Transmitter } from './Transmitter';
 
-client.on('connect', () => {
-  cron.schedule('*/5 * * * * *', () => {
-    const [min, max] = [80, 200];
-    const sensorValue = Math.floor(Math.random() * (max - min + 1) + min);
-    const data = JSON.stringify({ sensorValue });
+(() => {
+  const transmitter = new Transmitter();
 
-    console.log(data);
+  const connectionOptions = {
+    port: process.env.MQTT_PORT,
+    broker: process.env.MQTT_BROKER,
+    username: process.env.MQTT_USERNAME,
+    password: process.env.MQTT_PASSWORD
+  };
 
-    client.publish(topic, data, error => {
-      if (!error) console.log('message published');
+  console.log('Start reading sensor data');
+
+  transmitter.connect(connectionOptions, () => {
+    cron.schedule(process.env.READ_INTERVAL, () => {
+      const [min, max] = [80, 200];
+      const sensorValue = Math.floor(Math.random() * (max - min + 1) + min);
+
+      transmitter.send(sensorValue, process.env.MQTT_TOPIC, error => {
+        if (error) {
+          console.log(
+            `An error occurred while publishing the measurement. Err: ${error}`
+          );
+        } else {
+          console.log('Successfully send message to mqtt broker');
+        }
+      });
     });
   });
-});
+})();
