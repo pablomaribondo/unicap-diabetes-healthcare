@@ -11,7 +11,12 @@ export class Storage {
   }
 
   async save(message: { sensorValue: string; timestamp: string }, callback) {
-    console.log(`Storing message: ${message.sensorValue} ${message.timestamp}`);
+    console.log(
+      `Storing message: ${JSON.stringify({
+        glucose: message.sensorValue,
+        timestamp: message.timestamp
+      })}`
+    );
 
     callback();
   }
