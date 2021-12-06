@@ -1,6 +1,7 @@
 {
   "name": "unicap-diabetes-healthcare",
   "author": "Pablo Maribondo <pablomgvieira@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix",
