@@ -17,4 +17,10 @@ Tendo em vista a necessidade de democratizar o acesso ao equipamento, o *HCD - H
 
 Todo o aparato ferramental para o desenvolvimento do *HCD* foi escolhido visando atender a maior diversidade de
 aparelhos possíveis e evitando a sobrecarga dos dispositivos.
-Tais prioridades resultaram no *Node.JS* com *TypeScript* para reger o sensor, o *MQTT - Message Queuing Telemetry Transport* como protocolo de comunicação entre os serviços, *Aedes MQTT* como *broker*, a segurança fica a cargo do *TLS - Transport Layer Security* e futuramente o InfluxDB para armazenamento dos dados.
+Tais prioridades resultaram no [*Node.JS*][nodejs] com [*TypeScript*][typescript] para reger o sensor, o [*MQTT - Message Queuing Telemetry Transport*][mqtt] como protocolo de comunicação entre os serviços, [*Aedes MQTT*][aedes] como *broker*, a segurança fica a cargo do *TLS - Transport Layer Security* e futuramente o [InfluxDB][influx] para armazenamento dos dados.
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[mqtt]: https://mqtt.org/
+[aedes]: https://github.com/moscajs/aedes/
+[influx]: https://www.influxdata.com/
